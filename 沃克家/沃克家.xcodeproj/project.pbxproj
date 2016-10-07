@@ -14,6 +14,11 @@
 		907AB5FA1DA735CF009D3788 /* ___.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 907AB5F81DA735CF009D3788 /* ___.xcdatamodeld */; };
 		907AB5FC1DA735CF009D3788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 907AB5FB1DA735CF009D3788 /* Assets.xcassets */; };
 		907AB5FF1DA735CF009D3788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 907AB5FD1DA735CF009D3788 /* LaunchScreen.storyboard */; };
+		907AB6081DA73BF0009D3788 /* WKJTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AB6071DA73BF0009D3788 /* WKJTabBarViewController.m */; };
+		907AB60B1DA73C9E009D3788 /* WKJSalesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AB60A1DA73C9E009D3788 /* WKJSalesViewController.m */; };
+		907AB60E1DA73CCC009D3788 /* WKJAfterServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AB60D1DA73CCC009D3788 /* WKJAfterServiceViewController.m */; };
+		907AB6111DA73CE0009D3788 /* WKJOfficeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AB6101DA73CE0009D3788 /* WKJOfficeViewController.m */; };
+		907AB6141DA73CF0009D3788 /* WKJMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AB6131DA73CF0009D3788 /* WKJMoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,16 @@
 		907AB5FB1DA735CF009D3788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		907AB5FE1DA735CF009D3788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		907AB6001DA735CF009D3788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		907AB6061DA73BF0009D3788 /* WKJTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKJTabBarViewController.h; sourceTree = "<group>"; };
+		907AB6071DA73BF0009D3788 /* WKJTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKJTabBarViewController.m; sourceTree = "<group>"; };
+		907AB6091DA73C9E009D3788 /* WKJSalesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKJSalesViewController.h; sourceTree = "<group>"; };
+		907AB60A1DA73C9E009D3788 /* WKJSalesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKJSalesViewController.m; sourceTree = "<group>"; };
+		907AB60C1DA73CCC009D3788 /* WKJAfterServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKJAfterServiceViewController.h; sourceTree = "<group>"; };
+		907AB60D1DA73CCC009D3788 /* WKJAfterServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKJAfterServiceViewController.m; sourceTree = "<group>"; };
+		907AB60F1DA73CE0009D3788 /* WKJOfficeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKJOfficeViewController.h; sourceTree = "<group>"; };
+		907AB6101DA73CE0009D3788 /* WKJOfficeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKJOfficeViewController.m; sourceTree = "<group>"; };
+		907AB6121DA73CF0009D3788 /* WKJMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKJMoreViewController.h; sourceTree = "<group>"; };
+		907AB6131DA73CF0009D3788 /* WKJMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKJMoreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +79,16 @@
 				907AB5F01DA735CF009D3788 /* AppDelegate.m */,
 				907AB5F21DA735CF009D3788 /* ViewController.h */,
 				907AB5F31DA735CF009D3788 /* ViewController.m */,
+				907AB6061DA73BF0009D3788 /* WKJTabBarViewController.h */,
+				907AB6071DA73BF0009D3788 /* WKJTabBarViewController.m */,
+				907AB6091DA73C9E009D3788 /* WKJSalesViewController.h */,
+				907AB60A1DA73C9E009D3788 /* WKJSalesViewController.m */,
+				907AB60C1DA73CCC009D3788 /* WKJAfterServiceViewController.h */,
+				907AB60D1DA73CCC009D3788 /* WKJAfterServiceViewController.m */,
+				907AB60F1DA73CE0009D3788 /* WKJOfficeViewController.h */,
+				907AB6101DA73CE0009D3788 /* WKJOfficeViewController.m */,
+				907AB6121DA73CF0009D3788 /* WKJMoreViewController.h */,
+				907AB6131DA73CF0009D3788 /* WKJMoreViewController.m */,
 				907AB5F51DA735CF009D3788 /* Main.storyboard */,
 				907AB5FB1DA735CF009D3788 /* Assets.xcassets */,
 				907AB5FD1DA735CF009D3788 /* LaunchScreen.storyboard */,
@@ -108,6 +133,7 @@
 		907AB5E11DA735CF009D3788 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WKJ;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = jundanuantong;
 				TargetAttributes = {
@@ -153,10 +179,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907AB60B1DA73C9E009D3788 /* WKJSalesViewController.m in Sources */,
+				907AB6081DA73BF0009D3788 /* WKJTabBarViewController.m in Sources */,
+				907AB6141DA73CF0009D3788 /* WKJMoreViewController.m in Sources */,
 				907AB5F41DA735CF009D3788 /* ViewController.m in Sources */,
+				907AB6111DA73CE0009D3788 /* WKJOfficeViewController.m in Sources */,
 				907AB5FA1DA735CF009D3788 /* ___.xcdatamodeld in Sources */,
 				907AB5F11DA735CF009D3788 /* AppDelegate.m in Sources */,
 				907AB5EE1DA735CF009D3788 /* main.m in Sources */,
+				907AB60E1DA73CCC009D3788 /* WKJAfterServiceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
