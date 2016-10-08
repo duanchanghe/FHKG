@@ -9,6 +9,11 @@
 #import "WKJMoreViewController.h"
 
 @interface WKJMoreViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *permissionLabel;
 
 @end
 
@@ -28,7 +33,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor brownColor];
-
+    
+    _headerView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.3f];
+    
+    _userNameLabel.text =@"沃克家";
+    
+    _permissionLabel.text = @"超级管理员";
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -48,6 +60,7 @@
 {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoreCell"];
+    
     cell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
     
     cell.textLabel.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
@@ -60,7 +73,6 @@
     
     return cell;
 }
-
 
 
 - (void)didReceiveMemoryWarning {

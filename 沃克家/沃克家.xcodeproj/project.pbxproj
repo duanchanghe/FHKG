@@ -28,7 +28,6 @@
 		620C0FF872585BC864C866D2 /* Pods-沃克家.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-沃克家.release.xcconfig"; path = "Pods/Target Support Files/Pods-沃克家/Pods-沃克家.release.xcconfig"; sourceTree = "<group>"; };
 		907AB5E91DA735CF009D3788 /* 沃克家.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "沃克家.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		907AB5ED1DA735CF009D3788 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		907AB5EF1DA735CF009D3788 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		907AB5F01DA735CF009D3788 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		907AB5F21DA735CF009D3788 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		907AB5F31DA735CF009D3788 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		90C147101DA8A550009F650D /* WKJAfterServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKJAfterServiceCollectionViewCell.m; sourceTree = "<group>"; };
 		90C147121DA8AC74009F650D /* WKJOfficeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKJOfficeCollectionViewCell.h; sourceTree = "<group>"; };
 		90C147131DA8AC74009F650D /* WKJOfficeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKJOfficeCollectionViewCell.m; sourceTree = "<group>"; };
+		90C147161DA8DB16009F650D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		97FBA6BCD28C170482BC8AEE /* Pods-沃克家.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-沃克家.debug.xcconfig"; path = "Pods/Target Support Files/Pods-沃克家/Pods-沃克家.debug.xcconfig"; sourceTree = "<group>"; };
 		FE3F2F4E5F208BE4B91AA67D /* libPods-沃克家.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-沃克家.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,29 +96,11 @@
 		907AB5EB1DA735CF009D3788 /* 沃克家 */ = {
 			isa = PBXGroup;
 			children = (
-				907AB5EF1DA735CF009D3788 /* AppDelegate.h */,
-				907AB5F01DA735CF009D3788 /* AppDelegate.m */,
-				907AB5F21DA735CF009D3788 /* ViewController.h */,
-				907AB5F31DA735CF009D3788 /* ViewController.m */,
-				907AB6061DA73BF0009D3788 /* WKJTabBarViewController.h */,
-				907AB6071DA73BF0009D3788 /* WKJTabBarViewController.m */,
-				907AB6091DA73C9E009D3788 /* WKJSalesViewController.h */,
-				907AB60A1DA73C9E009D3788 /* WKJSalesViewController.m */,
-				907AB60C1DA73CCC009D3788 /* WKJAfterServiceViewController.h */,
-				907AB60D1DA73CCC009D3788 /* WKJAfterServiceViewController.m */,
-				90C1470F1DA8A550009F650D /* WKJAfterServiceCollectionViewCell.h */,
-				90C147101DA8A550009F650D /* WKJAfterServiceCollectionViewCell.m */,
-				907AB60F1DA73CE0009D3788 /* WKJOfficeViewController.h */,
-				907AB6101DA73CE0009D3788 /* WKJOfficeViewController.m */,
-				90C147121DA8AC74009F650D /* WKJOfficeCollectionViewCell.h */,
-				90C147131DA8AC74009F650D /* WKJOfficeCollectionViewCell.m */,
-				907AB6121DA73CF0009D3788 /* WKJMoreViewController.h */,
-				907AB6131DA73CF0009D3788 /* WKJMoreViewController.m */,
-				907AB5F51DA735CF009D3788 /* Main.storyboard */,
-				907AB5FB1DA735CF009D3788 /* Assets.xcassets */,
-				907AB5FD1DA735CF009D3788 /* LaunchScreen.storyboard */,
-				907AB6001DA735CF009D3788 /* Info.plist */,
-				907AB5F81DA735CF009D3788 /* ___.xcdatamodeld */,
+				90C147181DA8DB35009F650D /* rootViewController */,
+				90C1471B1DA8DB7A009F650D /* Sales(销售) */,
+				90C1471C1DA8DB98009F650D /* AfterService(售后) */,
+				90C1471D1DA8DBBD009F650D /* Office(办公) */,
+				90C1471E1DA8DBD9009F650D /* More(更多) */,
 				907AB5EC1DA735CF009D3788 /* Supporting Files */,
 			);
 			path = "沃克家";
@@ -130,6 +112,64 @@
 				907AB5ED1DA735CF009D3788 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90C147181DA8DB35009F650D /* rootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				907AB5F51DA735CF009D3788 /* Main.storyboard */,
+				907AB5FB1DA735CF009D3788 /* Assets.xcassets */,
+				907AB5FD1DA735CF009D3788 /* LaunchScreen.storyboard */,
+				907AB6001DA735CF009D3788 /* Info.plist */,
+				907AB5F81DA735CF009D3788 /* ___.xcdatamodeld */,
+				907AB6061DA73BF0009D3788 /* WKJTabBarViewController.h */,
+				907AB6071DA73BF0009D3788 /* WKJTabBarViewController.m */,
+				90C147161DA8DB16009F650D /* AppDelegate.h */,
+				907AB5F01DA735CF009D3788 /* AppDelegate.m */,
+				907AB5F21DA735CF009D3788 /* ViewController.h */,
+				907AB5F31DA735CF009D3788 /* ViewController.m */,
+			);
+			name = rootViewController;
+			sourceTree = "<group>";
+		};
+		90C1471B1DA8DB7A009F650D /* Sales(销售) */ = {
+			isa = PBXGroup;
+			children = (
+				907AB6091DA73C9E009D3788 /* WKJSalesViewController.h */,
+				907AB60A1DA73C9E009D3788 /* WKJSalesViewController.m */,
+			);
+			name = "Sales(销售)";
+			sourceTree = "<group>";
+		};
+		90C1471C1DA8DB98009F650D /* AfterService(售后) */ = {
+			isa = PBXGroup;
+			children = (
+				907AB60C1DA73CCC009D3788 /* WKJAfterServiceViewController.h */,
+				907AB60D1DA73CCC009D3788 /* WKJAfterServiceViewController.m */,
+				90C1470F1DA8A550009F650D /* WKJAfterServiceCollectionViewCell.h */,
+				90C147101DA8A550009F650D /* WKJAfterServiceCollectionViewCell.m */,
+			);
+			name = "AfterService(售后)";
+			sourceTree = "<group>";
+		};
+		90C1471D1DA8DBBD009F650D /* Office(办公) */ = {
+			isa = PBXGroup;
+			children = (
+				907AB60F1DA73CE0009D3788 /* WKJOfficeViewController.h */,
+				907AB6101DA73CE0009D3788 /* WKJOfficeViewController.m */,
+				90C147121DA8AC74009F650D /* WKJOfficeCollectionViewCell.h */,
+				90C147131DA8AC74009F650D /* WKJOfficeCollectionViewCell.m */,
+			);
+			name = "Office(办公)";
+			sourceTree = "<group>";
+		};
+		90C1471E1DA8DBD9009F650D /* More(更多) */ = {
+			isa = PBXGroup;
+			children = (
+				907AB6121DA73CF0009D3788 /* WKJMoreViewController.h */,
+				907AB6131DA73CF0009D3788 /* WKJMoreViewController.m */,
+			);
+			name = "More(更多)";
 			sourceTree = "<group>";
 		};
 		DC1492BAD8F8C73B81DFDA83 /* Pods */ = {

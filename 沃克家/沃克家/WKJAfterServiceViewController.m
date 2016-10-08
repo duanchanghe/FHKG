@@ -11,6 +11,7 @@
 
 
 @interface WKJAfterServiceViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UIView *headerView;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -34,7 +35,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
-
+    
+    
+    
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -55,11 +60,29 @@
 {
     
     WKJAfterServiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AfterServiceCell" forIndexPath:indexPath];
+    cell.backgroundControl.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2f];
+    cell.backgroundControl.layer.masksToBounds = YES;
+    cell.backgroundControl.layer.cornerRadius = 10;
+    [cell.backgroundControl addTarget:self action:@selector(touchDown:) forControlEvents:UIControlEventTouchDown];
+    [cell.backgroundControl addTarget:self action:@selector(touchUp:) forControlEvents:UIControlEventTouchUpInside];
+    
     NSArray *temp = self.basicArray[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:temp[0]];
     cell.textLabel.text = temp[1];
-    
+
     return cell;
+}
+
+
+
+- (void)touchDown:(UIControl *)sender
+{
+    sender.backgroundColor = [UIColor lightGrayColor];
+}
+
+- (void)touchUp:(UIControl *)sender
+{
+    sender.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2f];
 }
 
 

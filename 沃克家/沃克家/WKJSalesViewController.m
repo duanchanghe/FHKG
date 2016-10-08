@@ -9,6 +9,7 @@
 #import "WKJSalesViewController.h"
 
 @interface WKJSalesViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIView *headerView;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
