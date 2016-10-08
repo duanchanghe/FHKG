@@ -8,16 +8,62 @@
 
 #import "WKJSalesViewController.h"
 
-@interface WKJSalesViewController ()
+@interface WKJSalesViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, copy) NSArray *basicArray;
 
 @end
 
 @implementation WKJSalesViewController
 
+- (NSArray *)basicArray
+{
+    return @[@[@"function_statistics",@"客户登入"],
+             @[@"function_statistics",@"信息报备"],
+             @[@"function_marketing",@"我的客户"],
+             @[@"function_marketing1",@"合同管理"],
+             @[@"crm_search_icon",@"增加人脉"],
+             @[@"function_colleagues",@"人脉资源管理"]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor yellowColor];
+    
     // Do any additional setup after loading the view.
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    tableView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
+
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.basicArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SalesCell"];
+    cell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
+    cell.textLabel.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
+    
+    NSArray *temp = self.basicArray[indexPath.row];
+    
+    cell.textLabel.text = temp[1];
+    
+    cell.imageView.image = [UIImage imageNamed:temp[0]];
+    
+    return cell;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

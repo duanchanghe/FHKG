@@ -8,16 +8,60 @@
 
 #import "WKJMoreViewController.h"
 
-@interface WKJMoreViewController ()
+@interface WKJMoreViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
 @implementation WKJMoreViewController
 
+
+- (NSArray *)basicArray
+{
+    return @[@[@"ic_home_website",@"官方网站:www.woke.com"],
+             @[@"ic_home_tel",@"联系客服:"],
+             @[@"ic_home_consult",@"问题解答"],
+             @[@"ic_home_update",@"检查更新"],
+             @[@"ic_home_about",@"关于沃克家"]];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor brownColor];
+
     // Do any additional setup after loading the view.
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    tableView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
+    
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.basicArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoreCell"];
+    cell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
+    
+    cell.textLabel.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
+
+    NSArray *temp = self.basicArray[indexPath.row];
+    
+    cell.textLabel.text = temp[1];
+    
+    cell.imageView.image = [UIImage imageNamed:temp[0]];
+    
+    return cell;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
