@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="107"/>
+            <point key="canvasLocation" x="202" y="260"/>
         </scene>
         <!--销售管理-->
         <scene sceneID="MUK-AR-9YH">
@@ -208,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oth-fj-hvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3270" y="-1119"/>
+            <point key="canvasLocation" x="3270" y="-1117"/>
         </scene>
         <!--施工售后管理-->
         <scene sceneID="maT-U3-ion">
@@ -545,7 +545,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrL-F5-aBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="108"/>
+            <point key="canvasLocation" x="967" y="260"/>
         </scene>
         <!--售后-->
         <scene sceneID="77C-Zk-bSl">
