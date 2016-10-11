@@ -44,48 +44,65 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
-
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.basicArray.count;
+    
 }
-
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
     WKJOfficeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"OfficeCell" forIndexPath:indexPath];
-    cell.backgroundControl.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2f];
-    cell.backgroundControl.layer.masksToBounds = YES;
-    cell.backgroundControl.layer.cornerRadius = 10;
-    [cell.backgroundControl addTarget:self action:@selector(touchDown:) forControlEvents:UIControlEventTouchDown];
-    [cell.backgroundControl addTarget:self action:@selector(touchUp:) forControlEvents:UIControlEventTouchUpInside];
+    cell.layer.masksToBounds = YES;
+    cell.layer.cornerRadius = 5.0f;
     
     NSArray *temp = self.basicArray[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:temp[0]];
     cell.textLabel.text = temp[1];
+    
     return cell;
 }
 
-- (void)touchDown:(UIControl *)sender
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    sender.backgroundColor = [UIColor lightGrayColor];
+    return YES;
 }
 
-- (void)touchUp:(UIControl *)sender
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    sender.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2f];
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor grayColor];
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor colorWithWhite:1 alpha:0];
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.hidesBottomBarWhenPushed = YES;
+    
+    UIViewController *VC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TEST"];
+    
+    [self.navigationController pushViewController:VC animated:YES];
+    
+    self.hidesBottomBarWhenPushed = NO;
+    
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
 
 /*
 #pragma mark - Navigation

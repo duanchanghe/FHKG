@@ -60,29 +60,50 @@
 {
     
     WKJAfterServiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AfterServiceCell" forIndexPath:indexPath];
-    cell.backgroundControl.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2f];
-    cell.backgroundControl.layer.masksToBounds = YES;
-    cell.backgroundControl.layer.cornerRadius = 10;
-    [cell.backgroundControl addTarget:self action:@selector(touchDown:) forControlEvents:UIControlEventTouchDown];
-    [cell.backgroundControl addTarget:self action:@selector(touchUp:) forControlEvents:UIControlEventTouchUpInside];
+    cell.layer.masksToBounds = YES;
+    cell.layer.cornerRadius = 5.0f;
     
     NSArray *temp = self.basicArray[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:temp[0]];
     cell.textLabel.text = temp[1];
+    
 
     return cell;
 }
 
 
-
-- (void)touchDown:(UIControl *)sender
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    sender.backgroundColor = [UIColor lightGrayColor];
+    
+    self.hidesBottomBarWhenPushed = YES;
+    
+    UIViewController *VC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TEST"];
+    
+    [self.navigationController pushViewController:VC animated:YES];
+    
+    self.hidesBottomBarWhenPushed = NO;
+
+    
 }
 
-- (void)touchUp:(UIControl *)sender
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    sender.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2f];
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)colView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
+    //设置(Highlight)高亮下的颜色
+    [cell setBackgroundColor:[UIColor grayColor]];
+}
+
+- (void)collectionView:(UICollectionView *)colView  didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
+    //设置(Nomal)正常状态下的颜色
+    [cell setBackgroundColor:[UIColor colorWithWhite:1 alpha:0]];
 }
 
 

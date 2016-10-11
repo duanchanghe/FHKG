@@ -52,7 +52,9 @@
 {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SalesCell"];
+    
     cell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
+    
     cell.textLabel.backgroundColor = [UIColor colorWithWhite:1 alpha:0.0f];
     
     NSArray *temp = self.basicArray[indexPath.row];
@@ -64,7 +66,20 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    self.hidesBottomBarWhenPushed = YES;
+    
+    UIViewController *VC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TEST"];
+    
+    [self.navigationController pushViewController:VC animated:YES];
+    
+    self.hidesBottomBarWhenPushed = NO;
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

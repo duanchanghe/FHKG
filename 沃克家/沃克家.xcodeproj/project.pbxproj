@@ -75,6 +75,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		903247FE1DACE2FD00244CDC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				907AB6091DA73C9E009D3788 /* WKJSalesViewController.h */,
+				907AB60A1DA73C9E009D3788 /* WKJSalesViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		903247FF1DACE34200244CDC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				907AB60C1DA73CCC009D3788 /* WKJAfterServiceViewController.h */,
+				907AB60D1DA73CCC009D3788 /* WKJAfterServiceViewController.m */,
+				90C1470F1DA8A550009F650D /* WKJAfterServiceCollectionViewCell.h */,
+				90C147101DA8A550009F650D /* WKJAfterServiceCollectionViewCell.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		903248001DACE37100244CDC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				907AB60F1DA73CE0009D3788 /* WKJOfficeViewController.h */,
+				907AB6101DA73CE0009D3788 /* WKJOfficeViewController.m */,
+				90C147121DA8AC74009F650D /* WKJOfficeCollectionViewCell.h */,
+				90C147131DA8AC74009F650D /* WKJOfficeCollectionViewCell.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		903248011DACE37D00244CDC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				907AB6121DA73CF0009D3788 /* WKJMoreViewController.h */,
+				907AB6131DA73CF0009D3788 /* WKJMoreViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		907AB5E01DA735CF009D3788 = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +175,7 @@
 		90C1471B1DA8DB7A009F650D /* Sales(销售) */ = {
 			isa = PBXGroup;
 			children = (
-				907AB6091DA73C9E009D3788 /* WKJSalesViewController.h */,
-				907AB60A1DA73C9E009D3788 /* WKJSalesViewController.m */,
+				903247FE1DACE2FD00244CDC /* ViewController */,
 			);
 			name = "Sales(销售)";
 			sourceTree = "<group>";
@@ -144,10 +183,7 @@
 		90C1471C1DA8DB98009F650D /* AfterService(售后) */ = {
 			isa = PBXGroup;
 			children = (
-				907AB60C1DA73CCC009D3788 /* WKJAfterServiceViewController.h */,
-				907AB60D1DA73CCC009D3788 /* WKJAfterServiceViewController.m */,
-				90C1470F1DA8A550009F650D /* WKJAfterServiceCollectionViewCell.h */,
-				90C147101DA8A550009F650D /* WKJAfterServiceCollectionViewCell.m */,
+				903247FF1DACE34200244CDC /* ViewController */,
 			);
 			name = "AfterService(售后)";
 			sourceTree = "<group>";
@@ -155,10 +191,7 @@
 		90C1471D1DA8DBBD009F650D /* Office(办公) */ = {
 			isa = PBXGroup;
 			children = (
-				907AB60F1DA73CE0009D3788 /* WKJOfficeViewController.h */,
-				907AB6101DA73CE0009D3788 /* WKJOfficeViewController.m */,
-				90C147121DA8AC74009F650D /* WKJOfficeCollectionViewCell.h */,
-				90C147131DA8AC74009F650D /* WKJOfficeCollectionViewCell.m */,
+				903248001DACE37100244CDC /* ViewController */,
 			);
 			name = "Office(办公)";
 			sourceTree = "<group>";
@@ -166,8 +199,7 @@
 		90C1471E1DA8DBD9009F650D /* More(更多) */ = {
 			isa = PBXGroup;
 			children = (
-				907AB6121DA73CF0009D3788 /* WKJMoreViewController.h */,
-				907AB6131DA73CF0009D3788 /* WKJMoreViewController.m */,
+				903248011DACE37D00244CDC /* ViewController */,
 			);
 			name = "More(更多)";
 			sourceTree = "<group>";

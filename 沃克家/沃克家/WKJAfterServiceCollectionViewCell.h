@@ -14,6 +14,4 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
-@property (weak, nonatomic) IBOutlet UIControl *backgroundControl;
-
 @end
